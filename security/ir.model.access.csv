@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_many2many_many2many,many2many.many2many,model_many2many_many2many,group_historial,1,0,0,0
+
+access_h_h,h.h,model_h_h,base.group_user,1,1,1,1
+access_n_n,n.n,model_n_n,base.group_user,1,1,1,1
+

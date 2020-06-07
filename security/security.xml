@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="0">
+
+    <record model="ir.module.category" id="module_categoria_many">
+     <field name="name">manejo Manys</field>
+        <field name="description">categorias para many</field>
+        <field name="sequence">28</field>
+    </record>
+
+     <record model="res.groups" id="group_historial">
+     <field name="name">Historial</field>
+        <field name="category_id" ref="module_categoria_many"/>       
+    </record>
+
+    <record model="res.groups" id="group_historial2">
+     <field name="name">Many sin eliminacion</field>
+        <field name="category_id" ref="module_categoria_many"/> 
+        <field name="implied_ids" eval="[(4, ref('group_historial'))]"/> 
+    </record>
+
+    <record model="res.groups" id="group_historial3">
+     <field name="name">Historial2</field>
+        <field name="category_id" ref="module_categoria_many"/>   
+        <field name="implied_ids" eval="[(4, ref('group_historial2'))]"/>     
+    </record>
+    <!--
+
+        https://www.youtube.com/watch?v=mzg3EGD_6Gw
+    -->
+
+
+
+   
+</data>
+</odoo>

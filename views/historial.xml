@@ -1,0 +1,69 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="historial_ist">
+      <field name="name">h.h</field>
+      <field name="model">h.h</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="modulo"/>
+          <field name="modelo"/>
+          <field name="campo"/>
+          <field name="anterior"/>
+          <field name="actual"/>
+
+
+        </tree>
+      </field>
+    </record>
+
+    <record id="adrian_adrian_form" model="ir.ui.view">
+      <field name="name">h.h</field>
+      <field name="model">h.h</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <header>
+            <button string="SEARCH" name="accion_boton" type="object" class="oe_highlight"/>
+          </header>
+          <sheet>
+            <group >
+              <field name="name"/>
+              
+
+
+
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+    <!-- model.name form view -->
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="historial_action_window">
+      <field name="name">h.h</field>
+      <field name="res_model">h.h</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+
+
+
+    <!-- Top menu item -->
+
+
+    <menuitem name="historial" id="historial" parent="many2many.menu_2" action="historial_action_window"/>
+
+
+  </data>
+</odoo>
